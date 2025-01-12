@@ -1,0 +1,1 @@
+word_list=["arindam","dinda","saheb","myname","ad"]
