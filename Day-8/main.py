@@ -4,12 +4,12 @@ alphabet=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 
 
 def caesar(original_text,shift_amount,direction):
     main=""
+    if (direction=='decode'):
+        shift_amount*=-1
     for letter in original_text:
         if letter not in alphabet:
             main+=letter
         else:
-            if (direction=='decode'):
-                shift_amount*=-1
             shifted_position=alphabet.index(letter)+shift_amount  # 0->3
             shifted_position%=len(alphabet)
             main+=alphabet[shifted_position]
